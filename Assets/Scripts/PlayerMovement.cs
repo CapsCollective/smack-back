@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerNumber playerNum = PlayerNumber.One;
     public float Hspeed = 1f;
     public float Vspeed = 0.75f;
-    public float offsetMultiplier = 1f;
+    public float offsetAddition = 0.5f;
 
     private Collider col;
     private Vector3 movement;
