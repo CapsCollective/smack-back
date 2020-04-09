@@ -9,19 +9,15 @@ public class PlayerMovement : MonoBehaviour
     public float Hspeed = 1f;
     public float Vspeed = 0.75f;
     public float offsetAddition = 0.5f;
+    public float forceMag = 10f;
 
-    private Collider col;
+    private Rigidbody RB;
     private Vector3 movement;
 
     private void Awake()
     {
         movement = Vector3.zero;
-        col = gameObject.GetComponent<Collider>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        RB = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -30,10 +26,12 @@ public class PlayerMovement : MonoBehaviour
         Move((int)playerNum);
     }
 
+    private void FixedUpdate()
+    {
+    }
+
     private void Move(int num)
     {
-        //movement = Vector3.zero;
-
         string Hname = "Hor" + num;
         string Vname = "Ver" + num;
 
@@ -56,16 +54,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         gameObject.transform.Translate(movement);
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Bumper")
         {
-            // get the location of the collision
-            // Find hor component of vector
-            // Apply force to ball in that direction
+            Vector3 forceDir = (collision.transform.position - gameObject.transform.position).normalized;
+            RB.AddForce(forceDir*forceMag);
         }
     }
 }

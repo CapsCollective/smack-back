@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6550755799815966226}
   - component: {fileID: 8666126145273224446}
   - component: {fileID: 1896680146381630279}
-  - component: {fileID: 8166592019145736951}
+  - component: {fileID: 8884918956028817453}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -105,13 +105,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81a44d437abae454c9707d8f6003a2d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   playerNum: 1
   Hspeed: 4
   Vspeed: 3
   offsetAddition: 0.5
---- !u!54 &8166592019145736951
+--- !u!54 &8884918956028817453
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,11 +119,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4620727932006346220}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
+  m_Mass: 20
+  m_Drag: 5
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 3
+  m_Constraints: 116
+  m_CollisionDetection: 0
