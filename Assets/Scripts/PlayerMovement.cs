@@ -61,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bumper")
         {
-            Vector3 forceDir = (collision.transform.position - gameObject.transform.position).normalized;
+            Vector3 forceDir = new Vector3(-collision.transform.position.x + gameObject.transform.position.x, 0, -collision.transform.position.z + gameObject.transform.position.z).normalized;
+            print(forceDir);
             RB.AddForce(forceDir*forceMag);
         }
     }
