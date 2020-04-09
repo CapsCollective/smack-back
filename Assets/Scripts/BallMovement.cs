@@ -30,6 +30,7 @@ public class BallMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            _rb.velocity *= 1.05f;
             float dist = transform.position.x - other.transform.position.x;
             int direction = other.gameObject.GetComponent<PlayerMovement>().playerNum == PlayerMovement.PlayerNumber.One ? 1 : -1;
             float angle = Mathf.Deg2Rad * hitMaxAngle * direction * dist / hitRange;
@@ -37,7 +38,6 @@ public class BallMovement : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Bumper"))
         {
-            GetComponent<Rigidbody>().AddForce(transform.forward * boostSpeed);
         }
         else
         {
