@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator animator;   
+
     public enum PlayerNumber { One=1, Two=2};
     public PlayerNumber playerNum = PlayerNumber.One;
     public float Hspeed = 1f;
@@ -66,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
             movement.z = 0;
         }
 
+        animator.SetFloat("Blend X", Input.GetAxis(Hname));
+        animator.SetFloat("Blend Y", Input.GetAxis(Vname));
         gameObject.transform.Translate(movement);
 
     }
@@ -86,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
         {
             AS.Play();
         }
+        if (collision.collider.CompareTag("Ball"))
+            animator.SetTrigger("Hit");
     }
 
     IEnumerator Bump()
