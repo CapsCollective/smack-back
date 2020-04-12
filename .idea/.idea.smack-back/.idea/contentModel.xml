@@ -8,8 +8,14 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BallMovement.cs" t="Include" />
+          <e p="CallOnTrigger.cs" t="Include" />
+          <e p="GameEvent.cs" t="Include" />
+          <e p="GameEventListener.cs" t="Include" />
           <e p="MenuCamera.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
+          <e p="obstacle.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PointsManager.cs" t="Include" />
           <e p="ServiceLocator.cs" t="Include" />
         </e>
       </e>
