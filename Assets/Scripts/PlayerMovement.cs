@@ -68,7 +68,8 @@ public class PlayerMovement : MonoBehaviour
             Vector3 forceDir = new Vector3(-collision.transform.position.x + gameObject.transform.position.x, 0, -collision.transform.position.z + gameObject.transform.position.z).normalized;
             print(forceDir);
             RB.AddForce(forceDir*forceMag);
-            animator.SetTrigger("Hit");
         }
+        if (collision.collider.CompareTag("Ball"))
+            animator.SetTrigger("Hit");
     }
 }
