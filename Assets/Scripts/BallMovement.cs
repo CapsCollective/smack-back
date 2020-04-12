@@ -43,4 +43,10 @@ public class BallMovement : MonoBehaviour
         {
         }
     }
+
+    public void Explode()
+    {
+        // For now, just make the ball disappear.
+        gameObject.SetActive(false);
+    }
 }
