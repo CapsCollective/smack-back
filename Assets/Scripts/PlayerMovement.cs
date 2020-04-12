@@ -13,12 +13,20 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody RB;
     private Vector3 movement;
-    private bool move = false;
+    private bool move = true;
+    private AudioSource AS;
+    public AudioClip[] clips;
 
     private void Awake()
     {
         movement = Vector3.zero;
         RB = gameObject.GetComponent<Rigidbody>();
+        AS = gameObject.GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        AS.clip = clips[(int)playerNum - 1]; 
     }
 
     // Update is called once per frame
@@ -72,6 +80,11 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.GetComponent<AudioSource>().Play();
             StartCoroutine(Bump());
             
+        }
+
+        else if(collision.gameObject.tag == "Ball")
+        {
+            AS.Play();
         }
     }
 
