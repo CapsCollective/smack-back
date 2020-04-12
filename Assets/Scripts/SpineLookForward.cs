@@ -19,7 +19,7 @@ public class SpineLookForward : MonoBehaviour
         spine.eulerAngles = new Vector3(0, 0, 0);
         if (freezeX)
         {
-            spine.position = new Vector3(0, spine.position.y, spine.position.z);
+            spine.localPosition = new Vector3(0, spine.position.y, spine.position.z);
         }
     }
 }

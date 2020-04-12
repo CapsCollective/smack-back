@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator animator;   
+
     public enum PlayerNumber { One=1, Two=2};
     public PlayerNumber playerNum = PlayerNumber.One;
     public float Hspeed = 1f;
@@ -53,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
             movement.z = 0;
         }
 
+        animator.SetFloat("Blend X", Input.GetAxis(Hname));
+        animator.SetFloat("Blend Y", Input.GetAxis(Vname));
         gameObject.transform.Translate(movement);
 
     }
@@ -64,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 forceDir = new Vector3(-collision.transform.position.x + gameObject.transform.position.x, 0, -collision.transform.position.z + gameObject.transform.position.z).normalized;
             print(forceDir);
             RB.AddForce(forceDir*forceMag);
+            animator.SetTrigger("Hit");
         }
     }
 }
