@@ -47,6 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -76,6 +77,7 @@
       <workItem from="1586486676249" duration="2630000" />
       <workItem from="1586655347366" duration="1004000" />
       <workItem from="1586667812355" duration="641000" />
+      <workItem from="1586669063975" duration="1004000" />
     </task>
     <servers />
   </component>
@@ -98,6 +100,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="397" y="199" key="SettingsEditor" timestamp="1586669388017">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1586669388017" />
     <state x="559" y="249" width="672" height="678" key="search.everywhere.popup" timestamp="1586487431583">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
