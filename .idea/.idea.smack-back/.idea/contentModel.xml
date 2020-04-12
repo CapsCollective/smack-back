@@ -11,6 +11,7 @@
           <e p="CallOnTrigger.cs" t="Include" />
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
+          <e p="GoalLine.cs" t="Include" />
           <e p="MenuCamera.cs" t="Include" />
           <e p="MenuController.cs" t="Include" />
           <e p="obstacle.cs" t="Include" />
