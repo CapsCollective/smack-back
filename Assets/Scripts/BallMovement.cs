@@ -19,6 +19,14 @@ public class BallMovement : MonoBehaviour
     public bool playerTwo;
 
     private Rigidbody _rb;
+    private AudioSource AS;
+
+    private void Awake()
+    {
+        AS = gameObject.GetComponent<AudioSource>();
+    }
+
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -41,6 +49,7 @@ public class BallMovement : MonoBehaviour
         }
         else
         {
+            AS.Play();
         }
     }
 
