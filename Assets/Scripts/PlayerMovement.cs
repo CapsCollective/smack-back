@@ -89,9 +89,9 @@ public class PlayerMovement : MonoBehaviour
         else if(collision.gameObject.tag == "Ball")
         {
             AS.Play();
-        }
-        if (collision.collider.CompareTag("Ball"))
             animator.SetTrigger("Hit");
+        }
+
     }
 
     IEnumerator Bump()
