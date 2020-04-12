@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody RB;
     private Vector3 movement;
-    private bool isBumped = false;
+    private bool move = false;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isBumped)
+        if (move)
         {
             Move((int)playerNum);
         }
@@ -77,8 +77,13 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Bump()
     {
-        isBumped = true;
+        move = false;
         yield return new WaitForSeconds(0.5f);
-        isBumped = false;
+        move = true;
+    }
+
+    public void SetMakeMove(bool i)
+    {
+        move = i;
     }
 }
