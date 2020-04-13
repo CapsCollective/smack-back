@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0618afa615a741aa6aabf9de424ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 30
+  startSpeed: 40
   boostSpeed: 5
   hitRange: 1
   hitMaxAngle: 60

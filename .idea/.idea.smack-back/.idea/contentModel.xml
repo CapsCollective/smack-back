@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_smack-back.-18949080.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Ben\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ben\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_smack-back.-1639237751.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ben\Programming\smack-back" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Art" t="Include">
+          <e p="CRT.shader" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
+          <e p="AnimationTest.cs" t="Include" />
           <e p="BallMovement.cs" t="Include" />
           <e p="CallOnTrigger.cs" t="Include" />
+          <e p="Float.cs" t="Include" />
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
           <e p="GoalLine.cs" t="Include" />
@@ -18,12 +23,16 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PointsManager.cs" t="Include" />
           <e p="ServiceLocator.cs" t="Include" />
+          <e p="Shaders" t="Include">
+            <e p="VertexStandard.shader" t="Include" />
+          </e>
+          <e p="SpineLookForward.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="smack-back.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
