@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 1502714790163432835}
   - component: {fileID: 1502714790163432836}
   - component: {fileID: 1502714790163432832}
+  - component: {fileID: -1295188128792864828}
   m_Layer: 0
   m_Name: Color Trigger
   m_TagString: Untagged
@@ -253,7 +254,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1502714790163432832
 MonoBehaviour:
@@ -271,6 +272,20 @@ MonoBehaviour:
   - {fileID: 1502714789698224634}
   - {fileID: 1502714790555719037}
   color: {r: 0, g: 0.9413085, b: 1, a: 1}
+--- !u!114 &-1295188128792864828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502714790163432837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f76267c6c2cf149b30f4b67f933b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1502714790555719008
 GameObject:
   m_ObjectHideFlags: 0
