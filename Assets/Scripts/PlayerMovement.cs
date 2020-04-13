@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Animator animator;   
 
-    public enum PlayerNumber { One=1, Two=2};
+    public enum PlayerNumber { One = 1, Two = 2 };
     public PlayerNumber playerNum = PlayerNumber.One;
     public float Hspeed = 1f;
     public float Vspeed = 0.75f;
