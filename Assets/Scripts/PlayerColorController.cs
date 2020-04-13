@@ -6,6 +6,8 @@ public class PlayerColorController : MonoBehaviour
 {
     [SerializeField] private MeshFilter[] colorSetters;
     [SerializeField] private GameObject paddleGO;
+    [SerializeField] private AudioSource audioSource1;
+    [SerializeField] private AudioSource audioSource2;
 
     PlayerMovement.PlayerNumber playerNumber;
 
@@ -19,9 +21,11 @@ public class PlayerColorController : MonoBehaviour
                 SetColor(c);
         };
 
-        SetColor(ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
         if (ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber) != Color.white)
+        {
             paddleGO.SetActive(true);
+            SetColor(ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
+        }
         else
             paddleGO.SetActive(false);
     }
@@ -36,5 +40,7 @@ public class PlayerColorController : MonoBehaviour
             item.mesh.SetColors(colors);
         }
         paddleGO.SetActive(true);
+        audioSource1.Play();
+        audioSource2.Play();
     }
 }
