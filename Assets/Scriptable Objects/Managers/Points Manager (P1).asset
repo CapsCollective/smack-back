@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e63eeb057c941a4595bb28734827ea5, type: 3}
   m_Name: Points Manager (P1)
   m_EditorClassIdentifier: 
-  onScore: {fileID: 11400000, guid: 6edae09f3b1102e44b2ce92aa631d694, type: 2}
+  maxScore: 6

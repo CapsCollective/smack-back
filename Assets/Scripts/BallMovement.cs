@@ -19,19 +19,12 @@ public class BallMovement : MonoBehaviour
     public bool playerTwo;
 
     private Rigidbody _rb;
+    private MeshRenderer _mr;
     private AudioSource AS;
 
     private void Awake()
     {
         AS = gameObject.GetComponent<AudioSource>();
-    }
-
-
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-        
-        _rb.AddForce(transform.forward * startSpeed);
     }
     
     private void OnCollisionEnter(Collision other)
@@ -53,9 +46,25 @@ public class BallMovement : MonoBehaviour
         }
     }
 
+    public void MakeVisible()
+    {
+        _mr = GetComponent<MeshRenderer>();
+        _mr.enabled = true;
+    }
+
+    public void StartMoving()
+    {
+        enabled = true;
+        _rb = GetComponent<Rigidbody>();
+        _rb.WakeUp();
+        _rb.AddForce(transform.forward * startSpeed);
+    }
+
     public void Explode()
     {
-        // For now, just make the ball disappear.
-        gameObject.SetActive(false);
+        enabled = false;
+        _mr = GetComponent<MeshRenderer>();
+        _mr.enabled = false;        
+        _rb.Sleep();
     }
 }
