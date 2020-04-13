@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerColorController : MonoBehaviour
 {
     [SerializeField] private MeshFilter[] colorSetters;
+    [SerializeField] private GameObject paddleGO;
 
     PlayerMovement.PlayerNumber playerNumber;
 
@@ -19,6 +20,10 @@ public class PlayerColorController : MonoBehaviour
         };
 
         SetColor(ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
+        if (ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber) != Color.white)
+            paddleGO.SetActive(true);
+        else
+            paddleGO.SetActive(false);
     }
 
     public void SetColor(Color newColor)
@@ -30,5 +35,6 @@ public class PlayerColorController : MonoBehaviour
                 colors[i] = newColor;
             item.mesh.SetColors(colors);
         }
+        paddleGO.SetActive(true);
     }
 }
