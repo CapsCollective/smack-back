@@ -24,26 +24,26 @@ public class BallMovement : MonoBehaviour
 
     private void Awake()
     {
-        AS = gameObject.GetComponent<AudioSource>();
+        _audio = gameObject.GetComponent<AudioSource>();
     }
     
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log(_rb.velocity.magnitude);
+        if (_rb.velocity.magnitude < 7.5f) _rb.velocity = _rb.velocity.normalized * 7.5f;
         if (other.gameObject.CompareTag("Player"))
         {
-            _rb.velocity *= 1.05f;
+            _rb.velocity *= 1.07f;
             float dist = transform.position.x - other.transform.position.x;
             int direction = other.gameObject.GetComponent<PlayerMovement>().playerNum == PlayerMovement.PlayerNumber.One ? 1 : -1;
             float angle = Mathf.Deg2Rad * hitMaxAngle * direction * dist / hitRange;
             _rb.velocity = direction * _rb.velocity.magnitude * new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
         }
-        else if (other.gameObject.CompareTag("Bumper"))
-        {
-        }
         else
         {
-            AS.Play();
+            _audio.Play();
         }
+
     }
 
     public void MakeVisible()
