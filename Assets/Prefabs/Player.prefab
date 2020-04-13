@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1896680146381630279}
   - component: {fileID: 8884918956028817453}
   - component: {fileID: 5251954578919018679}
+  - component: {fileID: 219638630888935027}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4620727932006346220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6138441851056703551}
@@ -230,6 +231,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &219638630888935027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620727932006346220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4cad8cd3ed7c3b408fad97cc51a59cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSetters:
+  - {fileID: 3861279302150291032}
+  - {fileID: 3574237284102386984}
 --- !u!1001 &4365916630445013883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 7613047493194249028, guid: 55cd3c549ad87be48a3fc02261bbdd98,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7613047493194249028, guid: 55cd3c549ad87be48a3fc02261bbdd98,
         type: 3}
@@ -338,6 +354,18 @@ Transform:
 --- !u!95 &1261324308209167546 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3249283143617370049, guid: 55cd3c549ad87be48a3fc02261bbdd98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4365916630445013883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &3861279302150291032 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 648763649298089251, guid: 55cd3c549ad87be48a3fc02261bbdd98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4365916630445013883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &3574237284102386984 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 940381321430306387, guid: 55cd3c549ad87be48a3fc02261bbdd98,
     type: 3}
   m_PrefabInstance: {fileID: 4365916630445013883}
   m_PrefabAsset: {fileID: 0}
