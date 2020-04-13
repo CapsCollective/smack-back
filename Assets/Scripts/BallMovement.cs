@@ -20,7 +20,7 @@ public class BallMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private MeshRenderer _mr;
-    private AudioSource AS;
+    private AudioSource _audio;
 
     private void Awake()
     {
