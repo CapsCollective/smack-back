@@ -30,6 +30,7 @@
             <e p="VertexStandard.shader" t="Include" />
           </e>
           <e p="SpineLookForward.cs" t="Include" />
+          <e p="TriggerOnHit.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
