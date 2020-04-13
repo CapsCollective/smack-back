@@ -7,14 +7,8 @@ public class GoalLine : MonoBehaviour
     [Range(0f, 1f)] public float majorRatio;
     public GameEvent majorEvent;
     public GameEvent minorEvent;
-    public GameEvent reset;
 
     private static readonly string BallTag = "Ball";
-
-    private void Start()
-    {
-        reset.Raise();
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
