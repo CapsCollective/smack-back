@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 4620727932006346220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 6138441851056703551}
   m_Father: {fileID: 0}
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1261324308209167546}
   playerNum: 1
-  Hspeed: 4
-  Vspeed: 3
+  Hspeed: 6
+  Vspeed: 4
   offsetAddition: 0.5
   forceMag: 7000
   clips:
@@ -353,6 +353,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9100269121752483050}
     m_Modifications:
+    - target: {fileID: 1358052411442577213, guid: 55cd3c549ad87be48a3fc02261bbdd98,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 051645387b954504ea82b4e8643451b1, type: 2}
     - target: {fileID: 3249283143617370049, guid: 55cd3c549ad87be48a3fc02261bbdd98,
         type: 3}
       propertyPath: m_Avatar
