@@ -56,14 +56,14 @@ public class BallMovement : MonoBehaviour
     public void StartMoving()
     {
         enabled = true;
-        _rb.WakeUp();
+        _rb.isKinematic = false;
         _rb.AddForce(transform.forward * startSpeed);
     }
 
     public void Explode()
     {
         enabled = false;
-        _mr.enabled = false;        
-        _rb.Sleep();
+        _mr.enabled = false;
+        _rb.isKinematic = true;
     }
 }
