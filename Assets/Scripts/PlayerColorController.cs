@@ -16,16 +16,12 @@ public class PlayerColorController : MonoBehaviour
     {
         playerNumber = GetComponent<PlayerMovement>().playerNum;
 
-        PlayerManager.OnPlayerColorUpdated += (n, c) =>
-        {
-            if (playerNumber == n)
-                SetColor(c);
-        };
+        PlayerManager.OnPlayerColorUpdated += SetColor;
 
         if (ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber) != Color.white)
         {
             paddleGO.SetActive(true);
-            SetColor(ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
+            SetColor(playerNumber, ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
         }
         else
         {
@@ -35,10 +31,21 @@ public class PlayerColorController : MonoBehaviour
         }
     }
 
-    public void SetColor(Color newColor)
+    private void OnDestroy()
     {
+        PlayerManager.OnPlayerColorUpdated -= SetColor;
+    }
+
+    public void SetColor(PlayerMovement.PlayerNumber pN, Color newColor)
+    {
+        if (pN != playerNumber)
+            return;
+
         foreach (var item in colorSetters)
         {
+            if (item == null)
+                return;
+
             var colors = new Color[item.mesh.vertices.Length];
             for (int i = 0; i < colors.Length; i++)
                 colors[i] = newColor;
