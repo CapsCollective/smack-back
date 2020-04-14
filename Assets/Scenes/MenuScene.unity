@@ -1449,6 +1449,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 8130587713421595605, guid: 6b473b4cb28fdf8449c11b87ee94a01a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130587713421595605, guid: 6b473b4cb28fdf8449c11b87ee94a01a,
+        type: 3}
+      propertyPath: m_Height
+      value: 8.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130587713421595605, guid: 6b473b4cb28fdf8449c11b87ee94a01a,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1.41
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b473b4cb28fdf8449c11b87ee94a01a, type: 3}
 --- !u!1001 &728048833
