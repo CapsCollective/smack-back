@@ -29,7 +29,7 @@ public class BarrierReader : MonoBehaviour
         List<Vector4> position = new List<Vector4>(4);
         foreach (var o in barrierManager.transforms)
         {
-            position.Add(o.position);
+            position.Add(o.transform.position + o.offset);
         }
 
         Shader.SetGlobalVectorArray("PositionArray", position);
