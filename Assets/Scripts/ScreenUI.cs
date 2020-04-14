@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class ScreenUI : MonoBehaviour
 {
     public GameManager gameManager;
-    public AudioSource audioSource;
 
     public bool isPlayerOne;
     public Color countdownColor;
 
     [Header("Countdown Variables")]
     public Text countdownText;
-    public AudioClip countdownClip;
+    public AudioSource countdownOneSource;
+    public AudioSource countdownTwoSource;
+    public AudioSource countdownThreeSource;
 
     [Header("Play Variables")]
     public Text playText;
@@ -28,8 +29,11 @@ public class ScreenUI : MonoBehaviour
 
     [Header("End Variables")]
     public Text endText;
-    [Tooltip("What is read when the player has won")] public string winString;
-    [Tooltip("What is read when the player has lost")] public string loseString;
+    public AudioSource winSource;
+    public AudioClip playerOneWinClip;
+    public AudioClip playerTwoWinClip;
+    [Tooltip("What is read when the player has won")] [TextArea] public string winString;
+    [Tooltip("What is read when the player has lost")] [TextArea] public string loseString;
 
     private Mode CurrentMode = Mode.None;
     public enum Mode { None, Countdown, Play, End }
@@ -80,6 +84,11 @@ public class ScreenUI : MonoBehaviour
         switch (newModeValue)
         {
             case (int)Mode.Countdown:
+
+                countdownOneSource.PlayDelayed(2);
+                countdownTwoSource.PlayDelayed(1);
+                countdownThreeSource.Play();
+
                 countdownText.enabled = true;
                 playText.enabled = false;
                 //scoreText.enabled = false;
@@ -112,6 +121,7 @@ public class ScreenUI : MonoBehaviour
             //    break;
 
             case (int)Mode.End:
+                if (isPlayerOne) winSource.PlayOneShot(gameManager.pointsManager1.Max ? playerOneWinClip : playerTwoWinClip);
                 countdownText.enabled = false;
                 playText.enabled = false;
                 //scoreText.enabled = false;
