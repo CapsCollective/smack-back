@@ -116,10 +116,10 @@ MonoBehaviour:
   animator: {fileID: 1261324308209167546}
   footstepsSound: {fileID: 1297652924900325228}
   playerNum: 1
-  Hspeed: 6
-  Vspeed: 4
+  Hspeed: 7
+  Vspeed: 5
   offsetAddition: 0.5
-  forceMag: 7000
+  forceMag: 2000
   clips:
   - {fileID: 8300000, guid: 3d774c0e77230664991f52147b5464f3, type: 3}
   - {fileID: 8300000, guid: 192931931224dbf4b8855fc1b5165669, type: 3}

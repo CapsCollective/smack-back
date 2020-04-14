@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayerMovement player2;
     public BallMovement ball;
     public float ballOffset;
+    public int sceneToLoadIndex;
 
     public PointsManager pointsManager1;
     public PointsManager pointsManager2;
@@ -19,6 +21,9 @@ public class GameManager : MonoBehaviour
     public GameEvent countdownEvent;
     public GameEvent playEvent;
     public GameEvent endEvent;
+
+    public AudioSource audioSource;
+    public AudioClip scoreClip;
 
     private Vector3 player1Start;
     private Vector3 player2Start;
@@ -86,6 +91,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RoundEnd()
     {
+        audioSource.PlayOneShot(scoreClip);
+        Debug.Log("Round ended");
         ball.Explode();
 
         yield return new WaitForEndOfFrame();
@@ -108,13 +115,15 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
+        Debug.Log("Game ended");
         endEvent.Raise();
 
-        Debug.Log((pointsManager1.Max ? "PLAYER 1" : "PLAYER 2") + " WINS! (SHOW WIN SCREEN AND PLAY WIN AUDIO HERE)");
+        //Debug.Log((pointsManager1.Max ? "PLAYER 1" : "PLAYER 2") + " WINS! (SHOW WIN SCREEN AND PLAY WIN AUDIO HERE)");
 
         yield return new WaitForSeconds(gameTail);
 
-        Debug.Log("LOAD THE MAIN MENU HERE");
+        //Debug.Log("LOAD THE MAIN MENU HERE");
+        SceneManager.LoadScene(sceneToLoadIndex);
     }
 
     private bool GameEnded()
