@@ -14,6 +14,7 @@
           <e p="AnimationTest.cs" t="Include" />
           <e p="AudioReactiveController.cs" t="Include" />
           <e p="BallMovement.cs" t="Include" />
+          <e p="BumperEffect.cs" t="Include" />
           <e p="CallOnTrigger.cs" t="Include" />
           <e p="ColorTrigger.cs" t="Include" />
           <e p="DoorController.cs" t="Include" />

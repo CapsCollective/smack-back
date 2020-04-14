@@ -10,8 +10,8 @@ public class obstacle : MonoBehaviour
 
     private void Start()
     {
-        pos1 = new Vector3(-3, transform.position.y, transform.position.z);
-        pos2 = new Vector3(3, transform.position.y, transform.position.z);
+        pos1 = new Vector3(-4, transform.position.y, transform.position.z);
+        pos2 = new Vector3(4, transform.position.y, transform.position.z);
     }
 
     void Update()

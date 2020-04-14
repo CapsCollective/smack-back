@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     public PointsManager pointsManager1;
     public PointsManager pointsManager2;
 
+    public GameEvent countdownEvent;
+    public GameEvent playEvent;
+    public GameEvent scoreEvent;
+    public GameEvent endEvent;
+
     private Vector3 player1Start;
     private Vector3 player2Start;
     private Vector3 ballStart;
@@ -47,6 +52,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Countdown()
     {
+        countdownEvent.Raise();
+
         player1.enabled = false;
         player1.transform.position = player1Start;
 
@@ -66,6 +73,8 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
+        playEvent.Raise();
+
         player1.enabled = true;
         player2.enabled = true;
         ball.StartMoving();
@@ -78,6 +87,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RoundEnd()
     {
+        scoreEvent.Raise();
+
         ball.Explode();
 
         yield return new WaitForEndOfFrame();
@@ -100,6 +111,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
+        endEvent.Raise();
+
         Debug.Log((pointsManager1.Max ? "PLAYER 1" : "PLAYER 2") + " WINS! (SHOW WIN SCREEN AND PLAY WIN AUDIO HERE)");
 
         yield return new WaitForSeconds(gameTail);

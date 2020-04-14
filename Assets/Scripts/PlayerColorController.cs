@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerColorController : MonoBehaviour
 {
@@ -27,7 +28,11 @@ public class PlayerColorController : MonoBehaviour
             SetColor(ServiceLocator.Current.Get<PlayerManager>().GetPlayerColor(playerNumber));
         }
         else
+        {
             paddleGO.SetActive(false);
+            if (SceneManager.GetActiveScene().name == "PlayingField")
+                paddleGO.SetActive(true);
+        }
     }
 
     public void SetColor(Color newColor)
