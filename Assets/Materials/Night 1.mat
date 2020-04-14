@@ -90,14 +90,14 @@ Material:
     - _SpecularHighlights: 1
     - _Speed: 3
     - _SrcBlend: 1
-    - _SunSize: 0.96
+    - _SunSize: 0.988
     - _Surface: 0
     - _Time: 0
     - _TimeSlider: 0.99
     - _Transition: 0.3
     - _Transition1: 1.2
     - _Transition2: 0.2
-    - _WaveOffset: 0.74
+    - _WaveOffset: -0.3
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
