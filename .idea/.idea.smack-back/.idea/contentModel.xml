@@ -10,13 +10,16 @@
           <e p="CRT.shader" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AnimationEventController.cs" t="Include" />
           <e p="AnimationTest.cs" t="Include" />
           <e p="BallMovement.cs" t="Include" />
           <e p="CallOnTrigger.cs" t="Include" />
           <e p="ColorTrigger.cs" t="Include" />
+          <e p="DoorController.cs" t="Include" />
           <e p="Float.cs" t="Include" />
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="GoalLine.cs" t="Include" />
           <e p="MenuCamera.cs" t="Include" />
           <e p="MenuController.cs" t="Include" />
@@ -31,6 +34,10 @@
           </e>
           <e p="SpineLookForward.cs" t="Include" />
           <e p="TriggerOnHit.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Horizon Skybox.shader" t="Include" />
+          <e p="WireframeGlow.shader" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
