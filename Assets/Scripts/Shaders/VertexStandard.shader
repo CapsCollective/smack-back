@@ -7,6 +7,7 @@ Shader "VertexStandard"
 		_Metallic("Metallic", Range( 0 , 1)) = 0
 		_Smoothness("Smoothness", Range( 0 , 1)) = 0
 		[HideInInspector] __dirty( "", Int ) = 1
+		_Intensity ("Intensity", Float) = 1
 	}
 
 	SubShader
@@ -23,10 +24,11 @@ Shader "VertexStandard"
 
 		uniform float _Metallic;
 		uniform float _Smoothness;
+		uniform float _Intensity;
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
-			o.Albedo = i.vertexColor.rgb;
+			o.Emission = i.vertexColor.rgb * _Intensity;
 			o.Metallic = _Metallic;
 			o.Smoothness = _Smoothness;
 			o.Alpha = 1;

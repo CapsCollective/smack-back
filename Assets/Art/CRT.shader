@@ -14,6 +14,7 @@ Shader "My Shaders/CRT"
 		_Pixels("Pixels", Vector) = (0,0,0,0)
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
+		_Intensity ("Intensity", Float) = 0
 	}
 
 	SubShader
@@ -39,6 +40,7 @@ Shader "My Shaders/CRT"
 		uniform float _Bars;
 		uniform int _BarSize;
 		uniform float _Float0;
+		uniform float _Intensity;
 
 
 		float4 MyCustomExpression4( float y , float mult , float barSize )
@@ -69,7 +71,7 @@ Shader "My Shaders/CRT"
 			float barSize4 = (float)_BarSize;
 			float4 localMyCustomExpression4 = MyCustomExpression4( y4 , mult4 , barSize4 );
 			float4 lerpResult152 = lerp( lerpResult149 , localMyCustomExpression4 , ( _Float0 * temp_output_153_0 ));
-			o.Emission = ( ( _Color0 * tex2D( _Texture, pixelateduv136 ) ) * lerpResult152 ).rgb;
+			o.Emission = ( ( _Color0 * tex2D( _Texture, pixelateduv136 ) ) * lerpResult152 ).rgb * _Intensity;
 			o.Alpha = 1;
 		}
 

@@ -81,10 +81,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 forceDir = new Vector3(-collision.transform.position.x + gameObject.transform.position.x, 0, -collision.transform.position.z + gameObject.transform.position.z).normalized;
             RB.AddForce(forceDir*forceMag);
-            collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
-            collision.gameObject.GetComponent<AudioSource>().Play();
+            collision.gameObject.GetComponent<BumperEffect>().Play();
             StartCoroutine(Bump());
-            
         }
 
         else if(collision.gameObject.tag == "Ball")

@@ -25,11 +25,13 @@ public class BallMovement : MonoBehaviour
     private void Awake()
     {
         _audio = gameObject.GetComponent<AudioSource>();
+        _rb = gameObject.GetComponent<Rigidbody>();
+        _mr = GetComponent<MeshRenderer>();
     }
     
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(_rb.velocity.magnitude);
+        //Debug.Log(_rb.velocity.magnitude);
         if (_rb.velocity.magnitude < 7.5f) _rb.velocity = _rb.velocity.normalized * 7.5f;
         if (other.gameObject.CompareTag("Player"))
         {
@@ -48,14 +50,12 @@ public class BallMovement : MonoBehaviour
 
     public void MakeVisible()
     {
-        _mr = GetComponent<MeshRenderer>();
         _mr.enabled = true;
     }
 
     public void StartMoving()
     {
         enabled = true;
-        _rb = GetComponent<Rigidbody>();
         _rb.WakeUp();
         _rb.AddForce(transform.forward * startSpeed);
     }
@@ -63,7 +63,6 @@ public class BallMovement : MonoBehaviour
     public void Explode()
     {
         enabled = false;
-        _mr = GetComponent<MeshRenderer>();
         _mr.enabled = false;        
         _rb.Sleep();
     }
