@@ -1674,7 +1674,6 @@ GameObject:
   - component: {fileID: 1325151349}
   - component: {fileID: 1325151353}
   - component: {fileID: 1325151352}
-  - component: {fileID: 1325151351}
   - component: {fileID: 1325151350}
   m_Layer: 5
   m_Name: Canvas
@@ -1781,12 +1780,10 @@ MonoBehaviour:
   gameManager: {fileID: 138022185}
   audioSource: {fileID: 0}
   isPlayerOne: 0
+  countdownColor: {r: 1, g: 0, b: 0, a: 1}
   countdownText: {fileID: 1842264991}
   countdownClip: {fileID: 0}
   playText: {fileID: 1722640419}
-  scoreText: {fileID: 337114190}
-  scoreString: nice!
-  concedeString: =(
   endText: {fileID: 1444731311}
   winString: groovy dude!
   loseString: too bad\nso sad
@@ -1817,33 +1814,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1325151351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325151344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05762fdeb959b134cbdfe4efbdb13b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 7faaa0260a396c94081071c468b9c754, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325151349}
-        m_MethodName: SetMode
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1325151352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,7 +1836,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1893,7 +1863,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2242,7 +2212,6 @@ GameObject:
   - component: {fileID: 1411234541}
   - component: {fileID: 1411234545}
   - component: {fileID: 1411234544}
-  - component: {fileID: 1411234543}
   - component: {fileID: 1411234542}
   m_Layer: 5
   m_Name: Canvas
@@ -2349,12 +2318,10 @@ MonoBehaviour:
   gameManager: {fileID: 138022185}
   audioSource: {fileID: 0}
   isPlayerOne: 1
+  countdownColor: {r: 1, g: 0, b: 0, a: 1}
   countdownText: {fileID: 882507546}
   countdownClip: {fileID: 0}
   playText: {fileID: 1387169794}
-  scoreText: {fileID: 1116852109}
-  scoreString: nice!
-  concedeString: =(
   endText: {fileID: 1927183984}
   winString: groovy dude!
   loseString: too bad\nso sad
@@ -2385,33 +2352,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1411234543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411234536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05762fdeb959b134cbdfe4efbdb13b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 7faaa0260a396c94081071c468b9c754, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1411234541}
-        m_MethodName: SetMode
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1411234544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2434,7 +2374,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2461,7 +2401,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

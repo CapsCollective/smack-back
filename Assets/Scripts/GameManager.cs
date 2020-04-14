@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
 
     public GameEvent countdownEvent;
     public GameEvent playEvent;
-    public GameEvent scoreEvent;
     public GameEvent endEvent;
 
     private Vector3 player1Start;
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     private float countdownStart = 0;
 
-    public float CountdownTime { get { return Time.timeSinceLevelLoad - countdownStart; } }
+    public float CountdownTime { get { return countdown - (Time.timeSinceLevelLoad - countdownStart) + 1f; } }
 
     private void Awake()
     {
@@ -87,8 +86,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RoundEnd()
     {
-        scoreEvent.Raise();
-
         ball.Explode();
 
         yield return new WaitForEndOfFrame();
