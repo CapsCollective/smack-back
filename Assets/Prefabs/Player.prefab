@@ -119,7 +119,7 @@ MonoBehaviour:
   Hspeed: 7
   Vspeed: 5
   offsetAddition: 0.5
-  forceMag: 2000
+  forceMag: 5000
   clips:
   - {fileID: 8300000, guid: 3d774c0e77230664991f52147b5464f3, type: 3}
   - {fileID: 8300000, guid: 192931931224dbf4b8855fc1b5165669, type: 3}

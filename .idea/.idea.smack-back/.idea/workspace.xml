@@ -51,10 +51,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScreenToggle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CallOnTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/obstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
       </list>
     </option>
   </component>
