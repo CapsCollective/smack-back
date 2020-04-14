@@ -121,7 +121,11 @@ public class ScreenUI : MonoBehaviour
             //    break;
 
             case (int)Mode.End:
-                if (isPlayerOne) winSource.PlayOneShot(gameManager.pointsManager1.Max ? playerOneWinClip : playerTwoWinClip);
+                if (isPlayerOne)
+                {
+                    winSource.clip = gameManager.pointsManager1.Max ? playerOneWinClip : playerTwoWinClip;
+                    winSource.PlayDelayed(2f);
+                }
                 countdownText.enabled = false;
                 playText.enabled = false;
                 //scoreText.enabled = false;
