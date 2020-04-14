@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BarrierManager : IGameService
 {
@@ -9,6 +10,7 @@ public class BarrierManager : IGameService
     public BarrierManager()
     {
         transforms = new List<Transform>();
+        SceneManager.activeSceneChanged += (s, sc) => { transforms.Clear(); };
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
