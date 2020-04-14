@@ -21,12 +21,14 @@ public class BallMovement : MonoBehaviour
     private Rigidbody _rb;
     private MeshRenderer _mr;
     private AudioSource _audio;
+    private ParticleSystem _particleSystem;
 
     private void Awake()
     {
         _audio = gameObject.GetComponent<AudioSource>();
         _rb = gameObject.GetComponent<Rigidbody>();
         _mr = GetComponent<MeshRenderer>();
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
     }
     
     private void OnCollisionEnter(Collision other)
@@ -61,6 +63,7 @@ public class BallMovement : MonoBehaviour
 
     public void Explode()
     {
+        _particleSystem.Play();
         enabled = false;
         _mr.enabled = false;
         _rb.isKinematic = true;
