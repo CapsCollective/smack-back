@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8523150186902561270}
-  curBassLevel: 0
-  bassSmoothing: 0.95
-  timeBetweenBeats: 0.025
-  bias: 18
-  fallSpeedMult: 100
+  timeBetweenBeats: 0
+  bias: 10
+  fallSpeedMult: 0.5
+  minValue: 3
+  maxValue: 20

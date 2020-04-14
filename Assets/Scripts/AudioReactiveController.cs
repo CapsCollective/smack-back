@@ -9,13 +9,14 @@ public class AudioReactiveController : MonoBehaviour
 
     private int qSamples = 256;
     float[] samples;
-    public float curBassLevel;
+    private float curBassLevel;
     private float lastBassLevel;
-    [SerializeField] private float bassSmoothing = 0.5f;
+    private float bassSmoothing = 0.5f;
     [SerializeField] private float timeBetweenBeats = 0.1f;
     [SerializeField] private float bias = 0.1f;
     [SerializeField] private float fallSpeedMult = 2;
     [SerializeField] private float minValue;
+    [SerializeField] private float maxValue;
 
     private float timer = 0;
 
@@ -24,21 +25,21 @@ public class AudioReactiveController : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= timeBetweenBeats)
         {
+            timer = 0;
             if (GetBass() >= bias)
             {
-                lastBassLevel = GetBass();
-                timer = 0;
+                lastBassLevel = curBassLevel;
+                curBassLevel = GetBass();
             }
         }
-        curBassLevel -= Time.deltaTime * fallSpeedMult;
-        curBassLevel = Mathf.Lerp(lastBassLevel, curBassLevel, bassSmoothing);
-        curBassLevel = Mathf.Clamp(curBassLevel, minValue, 100);
+        curBassLevel = Mathf.SmoothDamp(curBassLevel, 0, ref bassSmoothing, fallSpeedMult);
+        curBassLevel = Mathf.Clamp(curBassLevel, minValue, maxValue);
         Shader.SetGlobalFloat("ReactiveAudio", curBassLevel);
     }
 
     public float[] AnalyzeSound()
     {
-        float[] spectrum = new float[64];
+        float[] spectrum = new float[256];
         audioSource.GetSpectrumData(spectrum, 0, FFTWindow.Hamming);
         return spectrum;
     }
