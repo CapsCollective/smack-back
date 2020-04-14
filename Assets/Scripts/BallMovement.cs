@@ -31,7 +31,7 @@ public class BallMovement : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(_rb.velocity.magnitude);
+        //Debug.Log(_rb.velocity.magnitude);
         if (_rb.velocity.magnitude < 7.5f) _rb.velocity = _rb.velocity.normalized * 7.5f;
         if (other.gameObject.CompareTag("Player"))
         {
