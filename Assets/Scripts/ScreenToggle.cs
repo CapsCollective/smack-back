@@ -20,9 +20,9 @@ public class ScreenToggle : MonoBehaviour
         while (true)
         {
             _meshRenderer.material = mat1;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
             _meshRenderer.material = mat2;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
         }
     } 
 }
