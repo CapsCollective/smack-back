@@ -7,6 +7,7 @@ public class CallOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        callback.Invoke(null);
+        if (col.CompareTag("Player"))
+            callback.Invoke(null);
     }
 }

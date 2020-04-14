@@ -44,6 +44,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/obstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScreenToggle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CallOnTrigger.cs" />
       </list>
     </option>
   </component>
@@ -108,7 +109,7 @@
       <workItem from="1586669063975" duration="1004000" />
       <workItem from="1586768083300" duration="3630000" />
       <workItem from="1586826507475" duration="249000" />
-      <workItem from="1586850081860" duration="3582000" />
+      <workItem from="1586850081860" duration="4279000" />
     </task>
     <servers />
   </component>
