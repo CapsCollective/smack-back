@@ -1,14 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class BarrierStuff
+{
+    public Transform transform;
+    public Vector3 offset;
+}
 
 public class BarrierManager : IGameService
 {
-    public List<Transform> transforms;
+    public List<BarrierStuff> transforms;
 
     public BarrierManager()
     {
-        transforms = new List<Transform>();
+        transforms = new List<BarrierStuff>();
+        SceneManager.activeSceneChanged += (s, sc) => { transforms.Clear(); };
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]

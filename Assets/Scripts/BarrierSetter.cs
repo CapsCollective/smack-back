@@ -5,6 +5,7 @@ using UnityEngine;
 public class BarrierSetter : MonoBehaviour
 {
     private BarrierManager barrierManager;
+    [SerializeField] private Vector3 offset;
 
     void Start()
     {
@@ -15,14 +16,22 @@ public class BarrierSetter : MonoBehaviour
                 if (s is BarrierManager)
                 {
                     barrierManager = ServiceLocator.Current.Get<BarrierManager>();
-                    barrierManager.transforms.Add(transform);
+                    barrierManager.transforms.Add(new BarrierStuff()
+                    {
+                        offset = offset,
+                        transform = transform
+                    });
                 }
             };
         }
         else
         {
             barrierManager = ServiceLocator.Current.Get<BarrierManager>();
-            barrierManager.transforms.Add(transform);
+            barrierManager.transforms.Add(new BarrierStuff()
+            {
+                offset = offset,
+                transform = transform
+            });
         }
     }
 }

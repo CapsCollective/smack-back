@@ -31,7 +31,7 @@ Shader "My Shader/Barrier"
 
 		uniform float4 _Color2;
 		uniform float4 _Color0;
-		uniform float4 PositionArray[4];
+		uniform float4 PositionArray[2];
 		uniform float _Distance;
 		uniform float _Falloff;
 		uniform float4 _NearColor;
