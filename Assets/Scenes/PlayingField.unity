@@ -767,6 +767,11 @@ PrefabInstance:
       propertyPath: timeBetweenBeats
       value: 0.025
       objectReference: {fileID: 0}
+    - target: {fileID: 8523150186902561270, guid: 00a4276eafa36d9418ddd55cd8de3c23,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8523150186902561271, guid: 00a4276eafa36d9418ddd55cd8de3c23,
         type: 3}
       propertyPath: m_LocalPosition.x
