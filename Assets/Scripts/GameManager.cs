@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public GameEvent playEvent;
     public GameEvent endEvent;
 
+    public AudioSource audioSource;
+    public AudioClip scoreClip;
+
     private Vector3 player1Start;
     private Vector3 player2Start;
     private Vector3 ballStart;
@@ -88,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RoundEnd()
     {
+        audioSource.PlayOneShot(scoreClip);
         Debug.Log("Round ended");
         ball.Explode();
 
