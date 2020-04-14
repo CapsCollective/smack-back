@@ -767,26 +767,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
-    - target: {fileID: 8523150186902561269, guid: 00a4276eafa36d9418ddd55cd8de3c23,
-        type: 3}
-      propertyPath: curBassLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523150186902561269, guid: 00a4276eafa36d9418ddd55cd8de3c23,
-        type: 3}
-      propertyPath: fallSpeedMult
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523150186902561269, guid: 00a4276eafa36d9418ddd55cd8de3c23,
-        type: 3}
-      propertyPath: timeBetweenBeats
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523150186902561269, guid: 00a4276eafa36d9418ddd55cd8de3c23,
-        type: 3}
-      propertyPath: minValue
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8523150186902561270, guid: 00a4276eafa36d9418ddd55cd8de3c23,
         type: 3}
       propertyPath: m_Volume

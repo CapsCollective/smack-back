@@ -22,7 +22,7 @@ public class DoorController : MonoBehaviour
     void OpenDoor(PlayerMovement.PlayerNumber p, Color col)
     {
         var pm = ServiceLocator.Current.Get<PlayerManager>();
-        if (pm.GetPlayerColor(PlayerMovement.PlayerNumber.One) != Color.white ||
+        if (pm.GetPlayerColor(PlayerMovement.PlayerNumber.One) != Color.white &&
             pm.GetPlayerColor(PlayerMovement.PlayerNumber.Two) != Color.white)
         {
             screen.material = playMat;
