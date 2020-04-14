@@ -1664,6 +1664,31 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.5497022
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.7396716e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.13026309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2958598
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.1479299
+      objectReference: {fileID: 0}
     - target: {fileID: 6541369118073655332, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
         type: 3}
       propertyPath: m_Mesh
@@ -3153,6 +3178,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Play Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.6807468
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.16792428
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2818375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.14091873
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 10.528163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541369118073655330, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -4.7640805
       objectReference: {fileID: 0}
     - target: {fileID: 6541369118073655333, guid: 9b22e08ecf183ed4694b1f8d31e4fb0a,
         type: 3}
