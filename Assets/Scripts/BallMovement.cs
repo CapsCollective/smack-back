@@ -35,7 +35,7 @@ public class BallMovement : MonoBehaviour
         if (_rb.velocity.magnitude < 7.5f) _rb.velocity = _rb.velocity.normalized * 7.5f;
         if (other.gameObject.CompareTag("Player"))
         {
-            _rb.velocity *= 1.07f;
+            _rb.velocity += _rb.velocity.normalized * 0.3f;
             float dist = transform.position.x - other.transform.position.x;
             int direction = other.gameObject.GetComponent<PlayerMovement>().playerNum == PlayerMovement.PlayerNumber.One ? 1 : -1;
             float angle = Mathf.Deg2Rad * hitMaxAngle * direction * dist / hitRange;
