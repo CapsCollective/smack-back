@@ -15,6 +15,7 @@ public class AudioReactiveController : MonoBehaviour
     [SerializeField] private float timeBetweenBeats = 0.1f;
     [SerializeField] private float bias = 0.1f;
     [SerializeField] private float fallSpeedMult = 2;
+    [SerializeField] private float minValue;
 
     private float timer = 0;
 
@@ -31,6 +32,7 @@ public class AudioReactiveController : MonoBehaviour
         }
         curBassLevel -= Time.deltaTime * fallSpeedMult;
         curBassLevel = Mathf.Lerp(lastBassLevel, curBassLevel, bassSmoothing);
+        curBassLevel = Mathf.Clamp(curBassLevel, minValue, 100);
         Shader.SetGlobalFloat("ReactiveAudio", curBassLevel);
     }
 
