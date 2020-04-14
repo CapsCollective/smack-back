@@ -9,9 +9,11 @@
         <e p="Art" t="Include">
           <e p="CRT.shader" t="Include" />
         </e>
+        <e p="ScreenToggle.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AnimationEventController.cs" t="Include" />
           <e p="AnimationTest.cs" t="Include" />
+          <e p="AudioReactiveController.cs" t="Include" />
           <e p="BallMovement.cs" t="Include" />
           <e p="CallOnTrigger.cs" t="Include" />
           <e p="ColorTrigger.cs" t="Include" />
@@ -30,6 +32,7 @@
           <e p="PointsManager.cs" t="Include" />
           <e p="ServiceLocator.cs" t="Include" />
           <e p="Shaders" t="Include">
+            <e p="Audio Reactive Emission.shader" t="Include" />
             <e p="VertexStandard.shader" t="Include" />
           </e>
           <e p="SpineLookForward.cs" t="Include" />
