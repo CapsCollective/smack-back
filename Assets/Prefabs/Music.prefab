@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e55a76ab33144669b214c240f514ebc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ffba784cd7abd4a059fd29a3fefe78b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8523150186902561270}
-  curBassLevel: 30.209515
+  curBassLevel: 0
   bassSmoothing: 0.95
-  timeBetweenBeats: 0.05
+  timeBetweenBeats: 0.025
   bias: 18
-  fallSpeedMult: 30
+  fallSpeedMult: 100
