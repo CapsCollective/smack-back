@@ -26,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://S:/2019.3.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpineLookForward.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BumperEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -40,11 +41,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerOnHit.cs" />
         <option value="$PROJECT_DIR$/Assets/ScreenToggle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/obstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScreenToggle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CallOnTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/obstacle.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +110,7 @@
       <workItem from="1586669063975" duration="1004000" />
       <workItem from="1586768083300" duration="3630000" />
       <workItem from="1586826507475" duration="249000" />
-      <workItem from="1586850081860" duration="6658000" />
+      <workItem from="1586850081860" duration="7340000" />
     </task>
     <servers />
   </component>
