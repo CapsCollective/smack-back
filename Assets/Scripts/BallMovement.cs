@@ -40,7 +40,7 @@ public class BallMovement : MonoBehaviour
             int direction = other.gameObject.GetComponent<PlayerMovement>().playerNum == PlayerMovement.PlayerNumber.One ? 1 : -1;
             float angle = Mathf.Deg2Rad * hitMaxAngle * direction * dist / hitRange;
             _rb.velocity = direction * _rb.velocity.magnitude * new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
-            _rb.velocity += _rb.velocity.normalized * 0.3f;
+            _rb.velocity += _rb.velocity.normalized * 0.4f;
         }
         else
         {
