@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Animator animator;   
+    [SerializeField] private Animator animator; 
+    [SerializeField] private AudioSource footstepsSound;
 
     public enum PlayerNumber { One = 1, Two = 2 };
     public PlayerNumber playerNum = PlayerNumber.One;
@@ -50,10 +51,12 @@ public class PlayerMovement : MonoBehaviour
     {
         string Hname = "Hor" + num;
         string Vname = "Ver" + num;
+        var is_moving = false;
 
         if (Input.GetAxisRaw(Hname) != 0)
         {
             movement.x = Input.GetAxisRaw(Hname) * Hspeed * Time.deltaTime;
+            is_moving = true;
         }
         else
         {
@@ -63,11 +66,20 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxisRaw(Vname) != 0)
         {
             movement.z = Input.GetAxisRaw(Vname) * Hspeed * Time.deltaTime;
+            is_moving = true;
         }
         else
         {
             movement.z = 0;
         }
+
+        if (is_moving && !footstepsSound.isPlaying)
+            footstepsSound.Play();
+        else if (!is_moving && footstepsSound.isPlaying)
+            footstepsSound.Stop();
+        else
+            footstepsSound.pitch = Random.Range(0.70f, 1.30f);
+            
 
         animator.SetFloat("Blend X", Input.GetAxis(Hname));
         animator.SetFloat("Blend Y", Input.GetAxis(Vname));
