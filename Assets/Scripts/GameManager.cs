@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip scoreClip;
 
+    public bool twoPlayer;
+    
     private Vector3 player1Start;
     private Vector3 player2Start;
     private Vector3 ballStart;

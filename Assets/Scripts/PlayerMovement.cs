@@ -15,6 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public float offsetAddition = 0.5f;
     public float forceMag = 10f;
 
+
+    // AI Controllers
+    public Vector3 defaultPos;
+    public bool aiControlled = false;
+    public Transform ballTransform;
+    public Rigidbody ballRb;
+    
     private Rigidbody RB;
     private Vector3 movement;
     private bool move = true;
@@ -26,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         movement = Vector3.zero;
         RB = gameObject.GetComponent<Rigidbody>();
         AS = gameObject.GetComponent<AudioSource>();
+        defaultPos = transform.position;
     }
 
     private void Start()
@@ -38,13 +46,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (move)
         {
-            Move((int)playerNum);
+            if (aiControlled) AutoMove();
+            else Move((int) playerNum);
         }
-        
-    }
-
-    private void FixedUpdate()
-    {
+        else
+        {
+            animator.SetFloat("Blend X", 0);
+            animator.SetFloat("Blend Y", 0);
+        }
     }
 
     private void Move(int num)
@@ -80,13 +89,48 @@ public class PlayerMovement : MonoBehaviour
         else
             footstepsSound.pitch = Random.Range(0.70f, 1.30f);
             
-
         animator.SetFloat("Blend X", Input.GetAxis(Hname));
         animator.SetFloat("Blend Y", Input.GetAxis(Vname));
-        gameObject.transform.Translate(movement);
+        transform.Translate(movement);
 
     }
 
+    private void AutoMove()
+    {
+        Vector3 target;
+        if (ballRb.velocity.z > 0)
+        {
+            target = ballTransform.position; // Remove the y axis
+            target.y = 0;
+            if (target.z < 1) target.z = 1;
+        }
+        else
+        {
+            target = defaultPos;
+        }
+
+        Vector3 diff = Vector3.zero;
+        bool is_moving = false;
+        if (Vector3.Distance(target, transform.position) > 0.5f)
+        {
+            Vector3 movement = Vector3.MoveTowards(transform.position, target, 6 * Time.deltaTime);
+            diff = (transform.position - movement) / (8 * Time.deltaTime);
+
+            transform.position = movement;
+            is_moving = true;
+        }
+        
+        if (is_moving && !footstepsSound.isPlaying)
+            footstepsSound.Play();
+        else if (!is_moving && footstepsSound.isPlaying)
+            footstepsSound.Stop();
+        else
+            footstepsSound.pitch = Random.Range(0.70f, 1.30f);
+        
+        animator.SetFloat("Blend X", diff.x);
+        animator.SetFloat("Blend Y", diff.z);
+    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bumper")

@@ -9,7 +9,6 @@ public class PlayerColorController : MonoBehaviour
     [SerializeField] private GameObject paddleGO;
     [SerializeField] private AudioSource audioSource1;
     [SerializeField] private AudioSource audioSource2;
-
     PlayerMovement.PlayerNumber playerNumber;
 
     private void Start()
