@@ -31,22 +31,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c044e1a8-2af2-467f-afe6-443f9c8e1afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TwoPlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TwoPlayerController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.smack-back/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.smack-back/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/ActivatePlayer2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/ActivatePlayer2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/OnePlayerMode.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/OnePlayerMode.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/OnePlayerMode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/OnePlayerMode.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TwoPlayerMode.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TwoPlayerMode.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TwoPlayerMode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/TwoPlayerMode.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.smack-back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.smack-back/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P1 Goal Line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/P1 Goal Line.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OnePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayingField.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OnePlayer.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TwoPlayer.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TwoPlayer.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayingField.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TwoPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TwoPlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +99,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TwoPlayerController.cs" />
       </list>
     </option>
@@ -164,6 +163,8 @@
       <workItem from="1586907508347" duration="399000" />
       <workItem from="1593862463990" duration="3997000" />
       <workItem from="1594027982613" duration="11010000" />
+      <workItem from="1594093750538" duration="2711000" />
+      <workItem from="1594109061350" duration="1166000" />
     </task>
     <servers />
   </component>

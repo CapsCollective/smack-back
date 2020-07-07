@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        AS.clip = clips[(int)playerNum - 1]; 
+        AS.clip = clips[(int)playerNum - 1];
+        if (playerNum == PlayerNumber.Two) aiControlled = !ServiceLocator.Current.Get<PlayerManager>().twoPlayer;
     }
 
     // Update is called once per frame
@@ -102,7 +103,8 @@ public class PlayerMovement : MonoBehaviour
         {
             target = ballTransform.position; // Remove the y axis
             target.y = 0;
-            if (target.z < 1) target.z = 1;
+            if (target.z < 0) target.z = 1;
+            else target.z += 1;
         }
         else
         {

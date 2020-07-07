@@ -13,6 +13,8 @@ public class PlayerManager : IGameService
         { PlayerMovement.PlayerNumber.Two, Color.white },
     };
 
+    public bool twoPlayer = false;
+    
     public static Action<PlayerMovement.PlayerNumber, Color> OnPlayerColorUpdated;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]

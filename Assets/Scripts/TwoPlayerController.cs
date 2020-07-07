@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,34 +8,31 @@ public class TwoPlayerController : MonoBehaviour
 {
     public GameObject player2;
     public GameObject banner;
+    public Material onePlayerMat;
+    public Material twoPlayerMat;
+    public MeshRenderer screen;
+    public ParticleSystem spawnParticles;
+    
+    private void Start()
+    {
+        if (ServiceLocator.Current.Get<PlayerManager>().twoPlayer) TwoPlayer = true;
+    }
 
-    private bool twoPlayer = false;
     public bool TwoPlayer
     {
-        get => twoPlayer;
+        get => ServiceLocator.Current.Get<PlayerManager>().twoPlayer;
         set
         {
-            twoPlayer = value;
-            if (banner) banner.SetActive(true);
-            if (player2) player2.SetActive(value);
-            player2.GetComponent<PlayerMovement>().aiControlled = !value;
+            ServiceLocator.Current.Get<PlayerManager>().twoPlayer = value;
+            banner.SetActive(true);
+            player2.SetActive(value);
+            screen.material = value ? onePlayerMat : twoPlayerMat;
+            spawnParticles.Play();
         }
     }
 
     public void ToggleTwoPlayer()
     {
         TwoPlayer = !TwoPlayer;
-    }
-
-    void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (!player2) player2 = GameObject.Find("Player 2");
-        player2.GetComponent<PlayerMovement>().aiControlled = !TwoPlayer;
     }
 }
