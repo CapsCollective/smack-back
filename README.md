@@ -1,7 +1,9 @@
 # Smack Back
-Traphouse Table-Tennis made in a week for UTS Game Development Studio 1
+Traphouse Table-Tennis made in a week for UTS Game Development Studio 1.
+<br>
+**Gameplay: https://www.youtube.com/watch?v=BTg2pMMQKwY**
 
-[![Image](Images/smackback.png)](https://www.youtube.com/watch?v=BTg2pMMQKwY)
+![Image](Images/banner.png)
 
 ## Instructions
 * Local two player controls with WASD and the arrow keys
