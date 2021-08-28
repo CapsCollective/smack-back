@@ -1,6 +1,8 @@
 # Smack Back
 Traphouse Table-Tennis made in a week for UTS Game Development Studio 1
 
+[![Image](Images/smackback.png)](https://www.youtube.com/watch?v=BTg2pMMQKwY)
+
 ## Instructions
 * Local two player controls with WASD and the arrow keys
 * Select your paddle colour in the main menu
